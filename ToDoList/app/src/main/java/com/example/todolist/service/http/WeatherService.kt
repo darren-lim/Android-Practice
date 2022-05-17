@@ -11,7 +11,7 @@ class WeatherService {
 
     fun getWeatherInfo(weatherReqVO: WeatherReqVO): WeatherResVO? {
         var weatherRes : WeatherResVO? = null
-        val url = "https://api.openweathermap.org/data/2.5/weather?q=${weatherReqVO.query}&appid=cb7d947dcacaad81c6bffcbc59f13d0c&units=imperial"
+        val url = "https://api.openweathermap.org/data/2.5/weather?q=${weatherReqVO.query}&appid=&units=imperial"
         val request = Request
             .Builder()
             .url(url)
@@ -32,7 +32,7 @@ class WeatherService {
 
     fun getWeatherForecastInfo(weatherReqVO: WeatherReqVO): WeatherForecastResVO? {
         var weatherForecastRes : WeatherForecastResVO? = null
-        val url = "https://api.openweathermap.org/data/2.5/forecast?q=${weatherReqVO.query}&appid=cb7d947dcacaad81c6bffcbc59f13d0c&units=imperial"
+        val url = "https://api.openweathermap.org/data/2.5/forecast?q=${weatherReqVO.query}&appid=&units=imperial"
         val request = Request
                 .Builder()
                 .url(url)
