@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.todolist.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/app_menu" >
+        <action
+            android:id="@+id/goToTodo"
+            app:destination="@id/todoFragment" />
+        <action
+            android:id="@+id/goToCalculator"
+            app:destination="@id/calculatorFragment" />
+        <action
+            android:id="@+id/goToWeather"
+            app:destination="@id/weatherFragment" />
+        <action
+            android:id="@+id/goToScanner"
+            app:destination="@id/Scanner" />
+        <action
+            android:id="@+id/goToMap"
+            app:destination="@+id/Map"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/todoFragment"
+        android:name="com.example.todolist.TodoFragment"
+        android:label="To Do List"
+        tools:layout="@layout/todo_fragment"
+        />
+
+    <fragment
+        android:id="@+id/calculatorFragment"
+        android:name="com.example.todolist.CalculatorFragment"
+        android:label="Calculator"
+        tools:layout="@layout/calculator_fragment"
+        />
+
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.example.todolist.WeatherFragment"
+        android:label="Weather"
+        tools:layout="@layout/weather_fragment"
+        />
+
+    <fragment
+        android:id="@+id/Scanner"
+        android:name="com.example.todolist.ScannerFragment"
+        android:label="Scanner"
+        tools:layout="@layout/scanner_fragment"
+        />
+
+    <fragment
+        android:id="@+id/Map"
+        android:name="com.example.todolist.MapsFragment"
+        android:label="Map"
+        tools:layout="@layout/map_fragment"
+        />
+
+</navigation>

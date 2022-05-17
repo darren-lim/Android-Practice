@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal_1"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical_1"
+        app:layout_constraintEnd_toStartOf="@id/guideline_vertical_2"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:id="@+id/todo_layout"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/menu_height"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_rounded_menu"
+                android:padding="4dp"
+                android:layout_marginRight="@dimen/menu_margin_right"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="To Do List"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/calculator_layout"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/menu_height"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_rounded_menu"
+                android:padding="4dp"
+                android:layout_marginLeft="@dimen/menu_margin_left"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calculator"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            android:layout_marginTop="@dimen/menu_margin_top">
+
+            <LinearLayout
+                android:id="@+id/weather_layout"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/menu_height"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_rounded_menu"
+                android:padding="4dp"
+                android:layout_marginRight="@dimen/menu_margin_right"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weather"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/scanner_layout"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/menu_height"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:background="@drawable/bg_rounded_menu"
+                android:gravity="center"
+                android:padding="4dp"
+                android:layout_marginLeft="@dimen/menu_margin_left"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scanner"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            android:layout_marginTop="@dimen/menu_margin_top">
+
+            <LinearLayout
+                android:id="@+id/map_layout"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/menu_height"
+                android:layout_weight="0.5"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_rounded_menu"
+                android:padding="4dp"
+                android:layout_marginRight="@dimen/menu_margin_right"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Map"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/menu_height"
+                android:layout_weight="0.5"
+                android:orientation="vertical" android:gravity="center"
+                android:padding="4dp"
+                android:layout_marginLeft="@dimen/menu_margin_left"
+                android:clickable="false">
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
